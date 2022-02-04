@@ -24,7 +24,7 @@ if($req_type === "GET"){
 	echo "GET";
 	if(isset($req_data[1]) && $req_data[1] === "") 
 		{
-			$requeteSQL = "SELECT FROM ";
+			$requeteSQL = "SELECT datePeremption FROM Produit ORDER BY datePeremption";
         }
     echo $requeteSQL;
 }
