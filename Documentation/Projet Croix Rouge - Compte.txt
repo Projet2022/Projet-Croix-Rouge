@@ -24,7 +24,7 @@ Identifiant : projet2022
 
 Mot de Passe : Projet2022
 
-Port : 
+Port : 22
 
 --------------------------------------------------
 
