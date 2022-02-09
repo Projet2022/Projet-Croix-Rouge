@@ -1,0 +1,59 @@
+header {
+	background-color: red;
+}
+
+h1 {
+	margin: 0;
+	padding: 15px;
+	font-size: 90pt;
+	color: white;
+	font-family: Lucida Console;
+}
+
+nav {
+	font-size: 29pt;
+	text-align: center;
+	font-family: Lucida Console;
+	color: red;
+}
+
+hr {
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center
+}
+
+article {
+	font-size: 13pt;
+	text-align: center;
+	color: black;
+	font-family: Lucida Console;
+	background-image: url("fond-bleu.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: red;
+	font-size: 15pt;
+	padding: 0;
+	font-family: Lucida Console;
+}
+
+p {
+	font-size: 22pt;
+	color: white;
+}
+
+li {
+	font-size: 15pt;
+}
+
+a {
+	color: black;
+}
