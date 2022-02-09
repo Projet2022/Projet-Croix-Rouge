@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Croix Rouge</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+		<h1><center><u>CROIX ROUGE</u></center></h1>
+		</header>
+		<img src="fd50c6ea852079accc2434d69973d9ed.jpg" alt="Croix Rouge" style="float:left" width="140" height="110"/>
+		<img src="fd50c6ea852079accc2434d69973d9ed.jpg" alt="Croix Rouge" style="float:right" width="140" height="110"/>
+		<nav>
+			<ul>Produits QrCode</ul>
+		</nav>
+		<hr>
+		<article>
+			<img src="croix_rouge_francaise_03523800_201833550.jpg" alt="Croix-Rouge française" style="float:left" width="275" height="155"/>
+			<br>
+			<ul><strong>La croix rouge est une organisation internationale à vocation humanitaire, fondée pour venir en aide aux victimes de la guerre.</strong></ul>
+				<ul><strong>La Croix-Rouge française (CRF) est une association d'aide humanitaire française fondée en 1864. Elle a pour objectif de venir en aide aux personnes en difficulté en France et à l'étranger.
+				Ses missions fondamentales sont l'urgence, le secourisme, l'action sociale, la formation, la santé et l'action internationale.</strong></ul>
+				<br>
+				<u><strong>Dans cette organisation, il existe des produits qui permettent de soigner des gens dans un état critique. Pour savoir les informations sur les produits, voici des QrCodes à scanner :</strong></u>
+				</br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</article>
+		<footer>
+			<ul>
+				<button onclick="changeColor(#0131B4);">Bleu</button>
+				<script type="text/javascript">
+					var color = ["white"];
+					var i = 0;
+					document.querySelector("button").addEventListener("click",
+						function(){
+						i = i < color.length ? ++i : 0;
+					document.querySelector("article").style.background = color[i]
+					})
+				</script>
+				<button onclick="changeColor(white);">Blanc</button>
+				<script type="text/javascript">
+					var color = ["blue"];
+					var i = 0;
+					document.querySelector("button").addEventListener("click",
+						function(){
+						i = i < color.length ? ++i : 0;
+					document.querySelector("article").style.background = color[i]
+					})
+				</script>
+				&nbsp;&nbsp;&nbsp;
+			</ul>
+			<ul>
+				<p><strong>Auteurs</strong></p>
+				<li>Thomas VALLET</li>
+				<li>Matenin TRAORE</li>
+				<li>Nethusan SURESHKUMAR</li>
+			</ul>
+			<ul>
+				<p><strong>Catégories</strong></p>
+				<li><a href="">Formation</a></li>
+				<li><a href="">Secours</a></li>
+				<li><a href="">Hygiène</a></li>
+				<li><a href="">Alimentation</a></li>
+			</ul>
+			<ul>
+				<p><strong>Référence</strong></p>
+				<li><a href="https://www.croix-rouge.fr/">Croix-Rouge française</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
