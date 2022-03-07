@@ -4,8 +4,8 @@ header {
 
 h1 {
 	margin: 0;
-	padding: 15px;
-	font-size: 90pt;
+	padding: 13px;
+	font-size: 80pt;
 	color: white;
 	font-family: Lucida Console;
 }
@@ -30,7 +30,7 @@ article {
 	text-align: center;
 	color: black;
 	font-family: Lucida Console;
-	background: #0131B4;
+	background: #11509A;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -47,6 +47,7 @@ footer {
 
 button {
 	cursor: pointer;
+	margin : auto;
 }
 
 p {
@@ -60,4 +61,8 @@ li {
 
 a {
 	color: black;
+}
+
+.encadrer-un-contenu {
+	border: 9px solid white;
 }
