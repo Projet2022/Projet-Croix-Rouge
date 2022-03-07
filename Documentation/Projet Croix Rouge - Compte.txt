@@ -18,7 +18,7 @@ mot de passe : ProjetCroixRouge2022
 
 --------------- Serveur --------------------
 
-IP : 172.20.21.225
+IP : 172.20.21.195
 
 Identifiant : projet2022
 
