@@ -1,43 +1,31 @@
 <?php
 
-/////////////////////////// GET //////////////////////////////////
+// Require
+require ('./model.php');
 
 // Connexion Base de données
-require ('./model.php');
-$id = ConnectDB();
-
-// Requete
-$req_type = $_SERVER["REQUEST_METHOD"];
-$req_path = $_SERVER["PATH_INFO"];
-$req_data = explode("/", $req_path);
-
-// Test RequeteSQL
-
-$requeteSQL = "SELECT NomTypeProduit,Quantitémin FROM TypeProduit";
-echo $requeteSQL;
+$mysqli = new mysqli("localhost","root","","croixrouge");
 
 
-// // Affichage Quantite minimale d'article atteinte
-// if($req_type === "GET"){
-// 	echo "GET";
-// 	if(isset($req_data[1]) && $req_data[1] === "") 
-// 		{
-// 			$requeteSQL = "SELECT NomTypeProduit,Quantitémin FROM TypeProduit";
-//         }
-//     echo $requeteSQL;
-// }
+// Requete quantite minimale d'article atteinte 
+$quantite = "SELECT NomTypeProduit,Quantitemin FROM TypeProduit";
+$res= $mysqli->query($quantite);
+$rep=$res->fetch_assoc();
 
-// // Affichage Produit a date de peremption depassee
-// if($req_type === "GET"){
-// 	echo "GET";
-// 	if(isset($req_data[1]) && $req_data[1] === "") 
-// 		{
-// 			$requeteSQL = "SELECT datePeremption FROM Produit ORDER BY datePeremption";
-//         }
-//     echo $requeteSQL;
-// }
+// Affichage
+echo nl2br(" | Quantité Minimal | \n");
+print_r($rep);
 
-// ?>
+// Requete produit a date de peremption depassee 
+$peremption = "SELECT nomProduit,datePeremption FROM produit ORDER BY datePeremption";
+$resp= $mysqli->query($peremption);
+while($repp=$resp->fetch_assoc()) {
+// Affichage
+echo nl2br("\n");
+echo nl2br(" | Date de péremption | \n");
+print_r($repp);
+}
 
 
-<!-- INSERT INTO `TypeProduit` (`idTypeProduit`, `NomTypeProduit`, `idCategorie`, `Emplacement`, `Quantitémin`, `QrCode`) VALUES ('', '', '', '', '', '') -->
+
+?>
