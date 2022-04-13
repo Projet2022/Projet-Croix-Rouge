@@ -1,0 +1,14 @@
+<h3>Produit : Lait</h3><button onclick="myFunction()">Retirer</button>
+<h3>Produit : Pomme de terre</h3><button onclick="myFunction()">Retirer</button>
+<h3>Produit : Farine</h3><button onclick="myFunction()">Retirer</button>
+<h3>Produit : Oeuf</h3><button onclick="myFunction()">Retirer</button>
+<h3>Produit :</h3><button onclick="myFunction()">Retirer</button>
+<h3>Produit :</h3><button onclick="myFunction()">Retirer</button>
+<h3>Produit :</h3><button onclick="myFunction()">Retirer</button>
+<h3>Produit :</h3><button onclick="myFunction()">Retirer</button>
+<script>
+function myFunction() {
+  const element = document.getElementById("quantite_option");
+  element.quantite_option();
+}
+</script>
