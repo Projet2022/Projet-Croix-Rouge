@@ -26,6 +26,4 @@ echo nl2br(" | Date de péremption | \n");
 print_r($repp);
 }
 
-
-
 ?>
