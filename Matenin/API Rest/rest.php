@@ -6,24 +6,29 @@ require ('./model.php');
 // Connexion Base de données
 $mysqli = new mysqli("localhost","root","","croixrouge");
 
+$req_type=$_SERVER['REQUEST_METHOD'];
 
-// Requete quantite minimale d'article atteinte 
-$quantite = "SELECT NomTypeProduit,Quantitemin FROM TypeProduit";
-$res= $mysqli->query($quantite);
-$rep=$res->fetch_assoc();
+if($req_type ==='GET') {
 
-// Affichage
-echo nl2br(" | Quantité Minimal | \n");
-print_r($rep);
+    // Quantité Minimal
+    $quantite = "SELECT NomTypeProduit,Quantitemin FROM TypeProduit";
+    $res= $mysqli->query($quantite);
+    $Quantite=$res->fetch_assoc();
+    echo nl2br(" Réponse : ");
+    echo json_encode($Quantite);
+    echo "<br />";
 
-// Requete produit a date de peremption depassee 
-$peremption = "SELECT nomProduit,datePeremption FROM produit ORDER BY datePeremption";
-$resp= $mysqli->query($peremption);
-while($repp=$resp->fetch_assoc()) {
-// Affichage
-echo nl2br("\n");
-echo nl2br(" | Date de péremption | \n");
-print_r($repp);
+    // Date de péremption
+    $peremption = "SELECT nomProduit,datePeremption FROM produit ORDER BY datePeremption";
+    $resp= $mysqli->query($peremption);
+
+    while($repp=$resp->fetch_assoc()) {
+        $Peremption = $repp;
+        echo nl2br(" \n Réponse : ");
+        echo json_encode($Peremption);
+    }
+    
 }
+
 
 ?>
