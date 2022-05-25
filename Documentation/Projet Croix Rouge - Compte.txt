@@ -30,12 +30,12 @@ Port : 22
 
 
 ---------------- Base de données -----------------
+
 172.20.21.195/phpmyadmin/
 
 Identifiant : projet
 
 Mot de Passe : projet
-
 
 --------------------------------------------------
 
