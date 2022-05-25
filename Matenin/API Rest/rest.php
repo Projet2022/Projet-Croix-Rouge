@@ -1,10 +1,14 @@
 <?php
 
+// Affichage des erreurs
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 // Require
 require ('./model.php');
 
 // Connexion Base de données
-$mysqli = new mysqli("localhost","root","","croixrouge");
+$mysqli = new mysqli("localhost","projet","projet","Croix Rouge");
 
 $req_type=$_SERVER['REQUEST_METHOD'];
 
@@ -18,8 +22,8 @@ if($req_type ==='GET') {
     echo json_encode($Quantite);
     echo "<br />";
 
-    // Date de péremption
-    $peremption = "SELECT nomProduit,datePeremption FROM produit ORDER BY datePeremption";
+    // Date de Péremption
+    $peremption = "SELECT nomProduit,datePeremption FROM Produit ORDER BY datePeremption ASC";
     $resp= $mysqli->query($peremption);
 
     while($repp=$resp->fetch_assoc()) {
@@ -29,6 +33,5 @@ if($req_type ==='GET') {
     }
     
 }
-
 
 ?>
